@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/login">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/topbar">
+</FrameLayout>
+
+    <EditText
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/email"
+        android:hint="@string/app_email"
+        android:inputType="textEmailAddress"
+        android:textSize="30sp"
+        android:drawableLeft="@mipmap/ic_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorBackground" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/app_senha"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:inputType="textPassword"
+        android:drawableLeft="@mipmap/ic_senha"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:background="@color/colorBackground"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_esqueceu_senha"
+        android:textColor="#FFFFFF"
+        android:id="@+id/esqueceuSenha"
+        android:paddingTop="15sp"
+        android:onClick="trocarTelaEsqueciSenha"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senha" />
+
+    <Button
+        android:background="@drawable/botao_customizado"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_entrar"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="20dp"
+        android:onClick="validacaoLongin"
+        app:layout_constraintTop_toBottomOf="@id/esqueceuSenha"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/botaoEntrar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_movo_aqui"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textNovo"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botaoEntrar" />
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        app:layout_constraintTop_toBottomOf="@id/textNovo"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:background="#A6000000"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="#B2FFFFFF"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_criar_conta"
+        android:onClick="trocarTelaCadastro"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divisor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
